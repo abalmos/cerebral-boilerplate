@@ -20,6 +20,13 @@ controller.modules({
   }, {
     onlyHash: true
   })
+})
+
+var test = function() { };
+test.test = function() {console.log('lost');}
+
+controller.addServices({
+  test
 });
 
 ReactDOM.render(<Container controller={controller}><ColorChanger /></Container>, document.getElementById('root'));
